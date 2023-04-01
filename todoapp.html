@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: #ceebfa;
+        }
+        button{
+            font-size: 15px;
+            padding: 3px;
+            border-radius: 5px;
+            font-size: large;
+            padding: 5px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        input{
+            width: 100px;
+            padding: 5px;
+        }
+        label{
+            font-size: 40px;
+            color: rgb(39, 39, 186);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+        }
+        h1{
+            background-color: yellow;
+        }
+        ol{
+            height: fit-content;
+            width: fit-content;
+        }
+        div{
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="hero1"></h1>
+        <label for="input">Add more task</label>
+        <input type="text" id="input">
+        <button id="btn">Submit</button>
+        <div id="hero2">
+        <ol id="list"></ol>
+        </div>
+    </div>
+    <script>
+        let z=document.getElementById("hero1");
+        let x=document.getElementById("list");
+        let y=document.getElementById("input");
+        let button=document.getElementById("btn");
+        let hero=document.getElementById("hero2");
+        button.addEventListener('click',function func(){
+                let li=document.createElement("li");
+                li.innerHTML=y.value;
+                x.appendChild(li) ; 
+                z.innerText="TO DO LIST";
+                z.style.color="red";
+                z.style.backgroundColor="yellow";
+                li.style.color="red";
+                li.style.fontSize="20px";
+                li.style.fontWeight="900";
+                
+        })
+    </script>
+</body>
+</html>
